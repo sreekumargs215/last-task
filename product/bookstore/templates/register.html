@@ -1,0 +1,35 @@
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login & Registration Form</title>
+
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+  <div class="container">
+    <div class="registration form">
+      <header>Signup</header>
+      <form method="POST" name="custom_form"> 
+         {% csrf_token %}
+        <input type="text" name="username" placeholder="Enter your Username">
+        <input type="number" name="phone" placeholder="Enter your Phone Number">
+        <input type="text" name="city" placeholder="Enter your City">
+        <input type="password" name="password1" id="checkpswd" placeholder="Create a password">
+        <input type="password" name="password2" placeholder="Confirm your password">
+        <input type="submit" name="submit" class="button btn-success" onsubmit="FormValidation()">
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <label> <a href="/login">Login</label></a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <script>
+ 
+  </script>
+</body>
+</html>
